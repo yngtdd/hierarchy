@@ -1,7 +1,7 @@
 use crate::asset::Asset;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Unit {
     pub id: u32,
     pub assets: Vec<Asset>,
@@ -23,7 +23,7 @@ impl UnitBuilder {
         self
     }
 
-    pub fn components(mut self, assets: Vec<Asset>) -> Self {
+    pub fn assets(mut self, assets: Vec<Asset>) -> Self {
         self.assets = assets;
         self
     }

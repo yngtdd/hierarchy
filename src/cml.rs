@@ -1,12 +1,12 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Cml {
     pub id: u32,
 }
 
 impl Cml {
-    fn new(id: u32) -> Self {
+    pub fn new(id: u32) -> Self {
         Self { id }
     }
 }

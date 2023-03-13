@@ -1,7 +1,7 @@
 use crate::component::Component;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Asset {
     pub id: u32,
     pub components: Vec<Component>,

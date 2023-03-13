@@ -4,4 +4,12 @@ pub mod component;
 pub mod cml;
 
 pub mod prelude;
-pub use prelude::{Unit, Asset, Component, Cml};
+pub use prelude::{
+    Unit, 
+    UnitBuilder,
+    Asset,
+    AssetBuilder,
+    Component,
+    ComponentBuilder,
+    Cml,
+};

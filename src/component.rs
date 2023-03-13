@@ -1,7 +1,7 @@
 use crate::cml::Cml;
 use serde::{Deserialize, Serialize};
 
-#[derive(Serialize, Deserialize)]
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Component {
     pub id: u32,
     pub cmls: Vec<Cml>,
