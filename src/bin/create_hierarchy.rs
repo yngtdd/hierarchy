@@ -1,8 +1,11 @@
 use std::path::Path;
+use chrono::NaiveDate;
 use hierarchy::prelude::*;
 
 fn main() {
-    let cml = Cml::new(1);
+    let start_date = NaiveDate::from_ymd_opt(1987, 3, 27).expect("Need a valid date");
+    let end_date = NaiveDate::from_ymd_opt(2030, 3, 27).expect("Need a valid date");
+    let cml = Cml::new(1, start_date, end_date);
 
     let component = ComponentBuilder::new()
         .id(02)
