@@ -7,9 +7,11 @@ fn main() {
     let unit: Unit = serde_json::from_str(&data).unwrap();
 
     for asset in unit.assets.iter() {
+            println!("Asset: {:?}", asset.id);
         for component in asset.components.iter() {
+            println!("Component: {:?}", component.id);
             for cml in component.cmls.iter() {
-                println!("CML {:?}", cml)
+                println!("CML {:?}", cml.id);
             }
         }
     }
